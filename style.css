@@ -1,0 +1,58 @@
+/* Reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: azure;
+}
+
+header h1{
+    margin: 3rem 0;
+}
+
+header h5{
+    margin-bottom: 3rem;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section#members-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.member-card{
+    width: calc(100% / 3);
+    background-color: rgb(25, 25, 25);
+    color: #fff;
+    padding: .75rem;
+    margin: .75rem;
+}
+
+div.member-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .7;
+    transition: all .5s;
+}
+
+div.member-card:hover img{
+    transform: scale(1.076, 1.076);
+    opacity: 1;
+}
+
+div.member-text{
+    margin-top: 1.25rem;
+}
+
+div.member-text h3{
+    margin-bottom: .15rem;
+}
