@@ -55,10 +55,23 @@ const members = [
 
 console.log(members);
 
-const mainWrapper = document.getElementById('members-container');
+drawTeam(members, 'members-container');
 
-for (let i = 0; i < members.length; i++) {
-    const currentElement = members[i];
-    mainWrapper.innerHTML += `${currentElement.name} ${currentElement.role} <img src="./img/${currentElement.image}" alt="image of a member"
-    `;
+function drawTeam( membersList, htmlContainerId ){
+    const mainWrapper = document.getElementById(htmlContainerId);
+    mainWrapper.innerHTML = "";
+
+    for (let i = 0; i < membersList.length; i++) {
+        const currentElement = membersList[i];
+
+        mainWrapper.innerHTML += `<div class="member-card">
+                <div class="member-image">
+                    <img src="./img/${currentElement.image}" alt="image of a member">
+                </div>
+                <div class="member-text">
+                    <h3>${currentElement.name}</h3>
+                    <p>${currentElement.role}</p>
+                </div> 
+        `;
+    }
 }
