@@ -55,7 +55,7 @@ const members = [
 
 console.log(members);
 
-drawTeam(members, 'members-container');
+drawTeam(members, 'member-container');
 
 function drawTeam( membersList, htmlContainerId ){
     const mainWrapper = document.getElementById(htmlContainerId);
