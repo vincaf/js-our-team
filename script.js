@@ -51,7 +51,7 @@ const members = [
         role: 'Graphic Designer',
         image: 'barbara-ramos-graphic-designer.jpg',
     },
-]
+];
 
 console.log(members);
 
@@ -59,5 +59,6 @@ const mainWrapper = document.getElementById('members-container');
 
 for (let i = 0; i < members.length; i++) {
     const currentElement = members[i];
-    mainWrapper.innerHTML += `${currentElement.name} ${currentElement.role} ${currentElement.image}`;
+    mainWrapper.innerHTML += `${currentElement.name} ${currentElement.role} <img src="./img/${currentElement.image}" alt="image of a member"
+    `;
 }
